@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Rent Car</title>
+</head>
+<body>
+    <section class="welcome">
+    <h1>Welcome to ABC Rent Car</h1>
+    </section>
+    
+    <section class="container">
+        <div id="carCardsContainer">
+        </div>
+    </section>
+
+    <section id="carDetails" class="hidden">
+        <div id="carContent"></div>
+    </section>
+
+    <section class="customer-section">
+            <h2>Data Pemesanan</h2>
+            <div class="form-group">
+                <label for="customerName">Nama Pelanggan:</label>
+                <input type="text" id="customerName" placeholder="Masukkan nama Anda" required>
+            </div>
+            <button onclick="calculateTotal()">Hitung Total</button>
+
+            <div id="calculationSummary">
+                <h3>Ringkasan Sewa</h3>
+                <ul id="summaryList">
+                </ul>
+                <div id="totalPrice">Total Harga: Rp 0</div>
+                <button onclick="saveBooking()" id="saveBookingBtn">Simpan Pemesanan</button>
+            </div>
+        </section>
+    </div>
+
+    <section class="saved-bookings-section">
+        <h2>Riwayat Pemesanan</h2>
+        <ul id="savedBookingsList">
+        </ul>
+    </section>
+
+    <div id="messageBox" class="message-box"></div>
+
+    <footer>
+        <p>&copy; ABC Rent Car</p>
+    </footer>
+
+</body>
+</html>

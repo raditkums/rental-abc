@@ -1,0 +1,327 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background: blanchedalmond;
+    color: white; 
+    text-align: center; 
+}
+
+h1 {
+    padding: 40px;
+    color: mediumaquamarine;
+}
+
+#carCardsContainer { 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 50px; 
+    padding: 20px 0; 
+}
+
+.car-card {
+    background-color: cadetblue;
+    padding: 20px;
+    width: 600px;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease; 
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-card img {
+    max-width: 350px; 
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px auto; 
+    border-radius: 8px; 
+}
+
+.car-card h3 {
+    color: white;
+    padding: 0; 
+    text-align: center;
+    font-size: 26px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.car-card p {
+    color: #e0e0e0;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 0; 
+    text-align: center; 
+    font-size: 18px; 
+}
+
+.car-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px; 
+    margin-bottom: 20px;
+}
+
+.car-option-item {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.car-option-item label {
+    font-weight: 500;
+    color: #34495e;
+}
+
+.car-option-item input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-left: 220px; 
+}
+
+.car-option-item input[type="date"] {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-left: 0px;
+}
+
+.car-option-item input[type="number"] {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-left: 50px;
+}
+
+/*Menghitung Harga Sewa*/
+.customer-section {
+    flex: 1;
+    width: 500px;
+    background-color: #fdfdfd;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 50px;
+    margin-left: 600px;
+}
+
+.customer-section h2 {
+    color: #34495e;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #34495e;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+#calculationSummary {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #ecf0f1;
+}
+
+#calculationSummary h3 {
+    color: #34495e;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#calculationSummary ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+#calculationSummary ul li {
+    background-color: #ecf0f1;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95em;
+    color: #555;
+}
+
+#totalPrice {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #27ae60;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #27ae60;
+    margin-top: 15px;
+}
+
+        /* Saved Bookings Section */
+        .saved-bookings-section {
+            flex: 1;
+            width: 550px; 
+            background-color: #fdfdfd;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-left: 570px;
+        }
+
+        .saved-bookings-section h2 {
+            color: #34495e;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+
+        #savedBookingsList {
+            list-style: none;
+            padding: 0;
+        }
+
+        #savedBookingsList li {
+            background-color: #ecf0f1;
+            border: 1px solid #bdc3c7;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: relative;
+        }
+
+        #savedBookingsList li strong {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+
+        #savedBookingsList li span {
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+
+        #savedBookingsList li ul {
+            list-style: disc;
+            margin-left: 20px;
+            color: #555;
+        }
+
+        #savedBookingsList li ul li {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+
+        .delete-button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            align-self: flex-end;
+            margin-top: 10px;
+            width: auto;
+        }
+
+        .delete-button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Message Box */
+        .message-box {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #28a745;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .message-box.error {
+            background-color: #dc3545;
+        }
+
+        .message-box.show {
+            opacity: 1;
+        }
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .car-card {
+        width: 90%; /* Make card responsive */
+        max-width: 400px; /* Limit max width for mobile */
+    }
+    .car-card img {
+        width: 100%; /* Make image fill card width */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .car-container {
+        gap: 20px;
+    }
+}
